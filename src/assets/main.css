@@ -1,0 +1,156 @@
+@import './base.css';
+
+.foo {
+  display: block;
+  height: 60px;
+  margin-top: 2rem;
+}
+
+
+.bg-poster {
+  display: block;
+  height: 105vh;
+  background: radial-gradient(rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0.8)50%), url(img/netplik-bg-1.jpg);
+  /* outline: 1rem solid hsl(348, 100%, 61%); */
+  background-size: cover;
+}
+.text-logo {
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+.nav-logo {
+  padding: 1rem 4rem;
+  margin: auto !important;
+}
+
+.text-card{
+  width: 400px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-title{
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 3rem;
+}
+.text-subtitle{
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.bot{
+  margin-bottom: 0 !important;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.stack {
+  display: block;
+}
+.poster {
+  position: relative;
+  /* width: 140px;
+  height: 210px; */
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  text-align: center;
+}
+.poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.poster-title {
+  display: block;
+  font-size: 14px;
+  width: 140px;
+  /* height: 100px; */
+  padding: 5px;
+  text-align: left;
+  white-space: normal;
+}
+
+.h-scroll {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}
+.h-scrolling {
+  display: inline-block;
+  text-align: center;
+  padding: 6px;
+}
+
+.tag-quality {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  box-shadow: 5px 5px 15px 2px rgb(0,0,0,0.5);
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+.tag-series-danger {
+  position: absolute;
+  top: 12px;
+  left: -24px;
+  rotate: 315deg;
+  font-size: 11px;
+  box-shadow: 5px 5px 15px 2px rgb(0,0,0,0.5);
+  width: auto;
+  height: auto;
+  padding: 2px 20px;
+  text-align: center;
+  background: rgb(255, 56, 96);
+  color: white;
+}
+.tag-series-success {
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  rotate: 315deg;
+  font-size: 11px;
+  box-shadow: 5px 5px 15px 2px rgb(0,0,0,0.5);
+  width: auto;
+  height: auto;
+  padding: 2px 20px;
+  text-align: center;
+  background: rgb(72, 199, 116);
+  color: white;
+}
+.is-info {
+  background: rgb(32, 156, 238);
+  color: black;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+  transition: .5s ease;
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-align: left;
+  white-space: normal;
+}
+.poster:hover .overlay {
+  opacity: 1;
+}
+.overlay-caption {
+  font-size: 10px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
