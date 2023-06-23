@@ -209,7 +209,7 @@ onMounted(() => {
             <div :class="selectFilter === 'Tahun' ? 'text-white' : 'text-white-50'" @click="selectFilter = 'Tahun', stateFilter[0] = 0, stateFilter[1] < 2 ? stateFilter[1]++ : stateFilter[1] == 2 ? stateFilter[1]-- : '', stateFilter[1] == 1 ? newMovies.sort(filterDownTahun) : stateFilter[1] == 2 ? newMovies.sort(filterUpTahun) : ''"><i :class="stateFilter[1] == 2 ? 'bi-arrow-up-short' : stateFilter[1] == 1 ? 'bi-arrow-down-short' : 'bi-dash'"></i> Tahun</div>
           </div>
         </div>
-        <nav class="mt-1 mx-auto mx-md-2 d-flex align-items-center row">
+        <nav class="mt-1 mx-auto mx-md-2 d-flex align-items-center row justify-content-center">
           <ul class="nav col-auto">
             <li class="nav-item"><i class="nav-link" :class="iSFilter ? 'bi-filter-circle-fill' : 'bi-filter-circle'" style="cursor: pointer;" @click="iSFilter = !iSFilter"></i></li>
             <li class="nav-item" @click="tagMovie = 'semua', isFilm = true, isSeries = true, resetFilter()">
@@ -223,7 +223,7 @@ onMounted(() => {
             </li>
             <li class="nav-link" :class="tagMovie !== 'semua' ? 'text-white' : 'text-white-50'" style="cursor:default;"><i class="bi bi-arrow-right-short"></i></li>
           </ul>
-          <ul class="nav d-inline-flex col" style="overflow: auto; max-height: 40px;">
+          <ul class="nav d-inline-flex justify-content-center col-auto col-sm" style="overflow: auto; max-height: 40px;">
             <li v-for="t, i in tags.sort()" :key="i" class="nav-item" @click="tagMovie = t">
               <a href="#TopContent" class="nav-link" :class="tagMovie == t ? 'text-white' : 'text-white-50'">{{ t }}</a>
             </li>
@@ -301,7 +301,7 @@ onMounted(() => {
 }
 @media (max-width: 576px) { 
   .poster{
-    height: 350px;
+    height: 250px;
   }
 }
 </style>
