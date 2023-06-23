@@ -185,11 +185,11 @@ onMounted(() => {
               <iframe v-if="selectedMovie.series !== 0" :src="selectedMovie.videoUrl[selectedMovie.selectSeries-1]" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               <iframe v-else :src="selectedMovie.videoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>            
-            <div v-else-if="isClikedMovie" style="width: 400px; height: 250px; background: black;">
+            <div v-else-if="isClikedMovie" class="ImageCarousel-size" style="background: black;">
             </div>
             <div v-else class="position-relative">
               <div v-for="m, i in movies" :key="i" @click="selectedMovie = m, selectedMovie.selectSeries = 1, isClikedMovie = true">
-                <div class="ImageCarousel fade position-relative">
+                <div class="ImageCarousel ImageCarousel-size fade position-relative">
                   <img :src="m.landscapeUrl" :alt="m.judul" class="w-100" style="min-height: 250px; object-fit: cover;">
                   <div class="ImageCarousel-caption position-absolute w-100 text-center" style="bottom: 5%;">{{ m.judul + ' (' + m.tahun +')' }}</div>
                 </div>
@@ -270,9 +270,11 @@ iframe{
 .ImageCarousel{
   display: none;
   cursor: pointer;
-  max-width: 400px; 
-  max-height: 250px; 
   overflow: hidden;
+  &-size{
+    max-width: 400px; 
+    max-height: 250px; 
+  }
   &-caption{
     opacity: 0;
     transition: all .5s ease;
@@ -310,7 +312,7 @@ iframe{
   .poster{
     height: 250px;
   }
-  iframe, .ImageCarousel{
+  iframe, .ImageCarousel-size{
     width: 85vw;
     height: 200px;
   }
